@@ -1,0 +1,84 @@
+<head>
+  <title>Leaderboard</title>
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="nav-collapse collapse">
+        <ul class="nav">
+            <li class="">
+                <a href="./getting-started.html">
+                    \{{ current_lib }}
+                </a>
+            </li>
+            <li class="">
+                <a href="./getting-started.html">
+                    Invites
+                </a>
+            </li>
+            <li class="">
+
+            </li>
+        </ul>
+        <a class="login" href="./scaffolding.html">
+            {{loginButtons}}
+        </a>
+    </div>
+</div>
+
+  <div id="outer">
+    {{> main}}
+  </div>
+  <div class>
+	{{>tools}}
+  </div>
+</body>
+
+<template name="request">
+	<div>
+		{{name}}<button class="passiton">pass on</button>
+		{{waiting}}
+	</div>
+</template>
+
+<template name="mybook">
+	<div>
+		{{name}}<button>pass on</button>
+		{{waiting}}
+	</div>
+</template>
+
+
+<template name="lib">
+  <div class="lib {{selected}}">
+    <span class="name">{{name}}</span>
+		<button class="removelib">
+			remove lib
+		</button>
+  </div>
+</template>
+
+
+<template name="invite">
+	<div>
+		{{from}} 
+		<br/>
+		{{lib.name}}
+		<button class="accept">
+			accept
+		</button>
+	</div>
+</template>
+
+<template name="book">
+	<div>
+		{{name}}
+        {{# unless mine}}
+            <button class="order">
+                order
+            </button>
+        {{/ unless }}
+		{{waiting}}
+	</div>
+</template>

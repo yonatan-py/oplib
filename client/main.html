@@ -1,0 +1,31 @@
+
+<template name="main">
+
+    <div class="books colum">
+        <h3>the lib books</h3>
+        {{#each books}}
+        {{>book}}
+
+        {{/each}}
+    </div>
+    <div class="mybooks colum">
+        <h3>my books</h3>
+        {{#each mybooks}}
+        {{>mybook}}
+
+        {{/each}}
+    </div>
+    <div class="requests colum">
+        <h3>my request</h3>
+        {{#each requests}}
+        {{>request}}
+        {{/each}}
+    </div>
+    <div class="waitings colum">
+        <h3>my waitings</h3>
+        {{#each waitings}}
+            {{name}}
+        {{/each}}
+    </div>
+
+</template>
